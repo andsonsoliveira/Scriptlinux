@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#Criação da pasta com o nome
+mkdir "$(whoami)"
+cd "$(whoami)"
+
+#Criação da pasta resultado
+mkdir resultado
+
+#Baixando arquivo
+wget http://vanilton.net/v1/download/zip.zip
+
+#Descompactação do arquivo
+unzip zip.zip
+
+#Movendo arquivo para pasta resultado
+mv zip.zip resultado/
+
+#Remoção do arquivo baixado
+rm zip.zip
